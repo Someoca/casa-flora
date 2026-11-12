@@ -26,13 +26,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Prepare site files
+        run: |
+          mkdir site
+          cp *.html *.css *.js site/
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            *.html
-            *.css
-            *.js
+          path: site
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4

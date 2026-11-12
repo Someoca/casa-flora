@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f4ed">
+    <meta name="description" content="Veja o catálogo multimarcas Casa Flora e consulte os produtos nas lojas oficiais.">
+    <title>Catálogo Casa Flora — beleza para descobrir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalogo.css">
+  </head>
+  <body>
+    <header class="catalog-header">
+      <a class="wordmark" href="index.html" aria-label="Casa Flora — voltar à loja">casa<span>flora</span><i>✳</i></a>
+      <div class="catalog-actions">
+        <a class="back-to-store" href="index.html">Voltar à loja <span aria-hidden="true">↗</span></a>
+        <button class="print-button" id="print-catalog" type="button">Imprimir / salvar PDF</button>
+      </div>
+    </header>
+
+    <main class="catalog-main">
+      <section class="catalog-intro">
+        <p class="eyebrow">CASA FLORA · CATÁLOGO MULTIMARCAS</p>
+        <h1>Um mundo de beleza<br><em>para descobrir.</em></h1>
+        <p>Encontre seu próximo favorito entre fragrâncias, maquiagem e cuidados. Consulte os detalhes e finalize diretamente na loja oficial de cada marca.</p>
+      </section>
+
+      <div class="catalog-notice" id="client-catalog-notice" role="status" aria-live="polite">
+        Carregando a seleção de produtos...
+      </div>
+
+      <section aria-label="Produtos da seleção">
+        <div class="client-toolbar">
+          <label class="client-search"><span aria-hidden="true">⌕</span><input id="client-search" type="search" placeholder="Buscar produto ou marca" aria-label="Buscar produto ou marca"></label>
+          <label>Marca
+            <select id="client-brand"><option value="">Todas</option><option value="boticario">O Boticário</option><option value="eudora">Eudora</option><option value="qdb">quem disse, berenice?</option><option value="oui">O.U.i</option></select>
+          </label>
+          <label>Categoria
+            <select id="client-category"><option value="">Todas</option></select>
+          </label>
+          <label>Ordenar
+            <select id="client-sort">
+              <option value="featured">Em destaque</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="name">Nome A–Z</option>
+            </select>
+          </label>
+        </div>
+        <p class="client-count" id="client-count" role="status" aria-live="polite"></p>
+        <div class="client-grid" id="client-grid"></div>
+      </section>
+
+      <p class="catalog-disclaimer">Seleção parcial, não catálogo completo. Preços e disponibilidade podem mudar; confirme as condições na página oficial antes de comprar.</p>
+    </main>
+
+    <footer class="catalog-footer">
+      <a class="wordmark" href="index.html">casa<span>flora</span><i>✳</i></a>
+      <p>Vitrine independente. Marcas pertencem aos respectivos titulares.</p>
+    </footer>
+
+    <a class="vip-support" data-vip-support href="https://wa.me/5519993787673" target="_blank" rel="noopener noreferrer" aria-label="Falar com o atendimento VIP pelo WhatsApp">
+      <span class="vip-bubble" aria-hidden="true">WA</span>
+      <span><strong>Atendimento VIP</strong><small>Fale com a Casa Flora</small></span>
+    </a>
+
+    <script src="store-config.js"></script>
+    <script src="catalog.js"></script>
+    <script src="product-art.js"></script>
+    <script src="whatsapp.js"></script>
+    <script src="catalogo.js"></script>
+  </body>
+</html>
